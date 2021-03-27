@@ -7,7 +7,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: sticky;
     top: 0;
     height: 71px;
 }
@@ -79,7 +78,7 @@
 .firstsection {
     align-items: center;
     justify-content: center;
-    margin-left: 268px;
+    margin-left: 160px;
 }
 
 .text {
@@ -121,16 +120,27 @@
     font-size: 14px;
     font-weight: 400;
     color: #1e0a3c;
-    margin-top: -13px;
+    margin-top: 3px;
 }
 
 .logo {
     margin-left: 600px;
 }
 
-.logo2 {
+.like {
     height: 26px;
     cursor: pointer;
+    color: #00000030;
+    font-size: 24px;
+}
+
+.heart i.fa-heart {
+    color: #f44336;
+    font-size: 24px;
+}
+
+.heart {
+    animation: heart 0.5s linear;
 }
 
 .logo1 {

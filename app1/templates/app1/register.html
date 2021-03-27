@@ -1,0 +1,30 @@
+{% extends 'app1/index.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container my-2">
+  <div class="p-1 m-1">
+    <div class="col-lg-7 mx-auto pt-4">
+       <div class="box-element " id="form-wrapper">
+         <hr><p><h3><b>Add An Event</b></h3></p><hr>
+         <form action="{% url 'register' %}" method="post" enctype="multipart/form-data" >
+            {% csrf_token %}
+            {{form.as_p}}
+           
+			 <hr>
+             <button class="btn btn-danger">Add Event</button>
+
+
+      </form>
+       </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+{% endblock content %}

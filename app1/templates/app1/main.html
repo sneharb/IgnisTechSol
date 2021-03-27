@@ -1,0 +1,37 @@
+{% extends 'app1/index.html' %}
+{% load static %}
+{% block content %}
+
+<div class="text">
+    <p class="text">Likes</p>
+  </div>
+ 
+ <div class="container">
+  <div class="row">
+   {% for Event in Events %}
+    <section class="firstsection">
+        <div class="box-main">
+            <div class="firsthalf">
+               <img src="{{Event.imageURL}}" alt="" class="">  
+            </div>
+            <div class="secondhalf">
+                <p class="text-big">{{Event.event_name}}</p>
+                <p class="text-small">{{Event.date}}{{Event.time}}</p>
+                <p class="text-small2">{{Event.location}}</p>
+                <div class="logo">
+                   <img src="{% static 'images/img4.png' %}" alt="" class="logo1">  
+                   <a href="#" class="like">
+                     <i class="fa fa-heart" aria-hidden="true"></i>
+                   </a>  
+                </div>
+                
+            </div>
+        
+          </div>
+        
+    </section>
+   {% endfor %}
+  </div>
+</div>
+    
+{% endblock content %}
